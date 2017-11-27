@@ -1,0 +1,11 @@
+{
+  "name": "nodesul",
+  "version": "1.1.0",
+  "description": "My first npm module m8!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saul Ivan Rivas Vega <saul.rivas@gartpage.com>",
+  "license": "ISC"
+}
