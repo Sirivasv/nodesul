@@ -1,4 +1,4 @@
-var IP = '192.168.1.76';
+var IP = '192.168.1.107';
 
 function successHandler (json_response) {
 	var responseDiv = document.getElementById('responseDiv');
