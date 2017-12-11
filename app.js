@@ -18,7 +18,7 @@
 
 	app.use("/jscript",express.static(__dirname + '/jscript'));
 	app.use(bodyParser.urlencoded({ extended: true}));
-	//app.use(bodyParser.json());
+	app.use(bodyParser.json());
 
 	app.get('/', function(request, response){
 		console.log('request received from: ' + request.ip);
@@ -61,7 +61,7 @@
 				"from" : from,
 				"to" : to,
 				"amount" : amount,
-				"convertedAmount" : value.amount
+				"convertedAmount" : value.converted
 			};
 
 			var responseString = JSON.stringify(responseValues);
