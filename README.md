@@ -2,10 +2,14 @@
 This is my npm module where I am just testing some features of npm development.
 
 ## Installing
-git clone https://github.com/Sirivasv/nodesul.git
-
-npm install
+* Through github
+    * git clone https://github.com/Sirivasv/nodesul.git
+    * npm install
+* Through npm
+    * npm install nodesul
 
 ## Running
-node app.js
-
+* Through github 
+    * node app.js
+* Through npm 
+    * node nodesul  
