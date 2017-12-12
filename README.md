@@ -12,4 +12,4 @@ This is my npm module where I am just testing some features of npm development.
 * Through github 
     * node app.js
 * Through npm 
-    * node nodesul  
+    * node node_modules/nodesul  
