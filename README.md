@@ -18,7 +18,7 @@ With Linux to start listening on PORT (this case 80) may require sudo privileges
 
 ## Features
 * http://<SERVER_IP>/Greeting 
-	* Sending a JSON request with the form:
+	* Sending a JSON POST request with the form:
 	```javascript
 		var request = {
 			"name" : "<YOUR_NAME_GOES_HERE>"
@@ -41,7 +41,7 @@ With Linux to start listening on PORT (this case 80) may require sudo privileges
 		};
 	```
 * http://<SERVER_IP>/Convert
-	* Sending a JSON request with the form:
+	* Sending a JSON POST request with the form:
 	```javascript
 		var request = {
 			"from" : "<ORIGIN_CURRENCY_CODE>",
