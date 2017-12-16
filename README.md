@@ -14,6 +14,7 @@ With Linux to start listening on PORT (this case 80) may require sudo privileges
     * node app.js
 * Through npm 
     * node node_modules/nodesul
+
 [landing_page]: https://github.com/Sirivasv/nodesul/raw/master/images/src1.png "Landing page"
 [response_received]: https://github.com/Sirivasv/nodesul/raw/master/images/src2.png "Response received"
 
