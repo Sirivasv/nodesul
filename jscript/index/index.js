@@ -1,4 +1,3 @@
-var IP = '192.168.1.107';
 
 function successHandler (json_response) {
 	var responseDiv = document.getElementById('responseDiv');
@@ -13,7 +12,7 @@ function successHandler (json_response) {
 function sendName () {
 	var name = document.getElementById('inputName').value;
 	var params = 'name=' + name;
-	var x = new _Conexion('http://' + IP + '/Greeting', params, successHandler);
+	var x = new _Conexion('http://' + window.location.hostname + '/Greeting', params, successHandler);
 }
 
 window.onload = function() {
