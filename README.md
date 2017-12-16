@@ -14,7 +14,8 @@ With Linux to start listening on PORT (this case 80) may require sudo privileges
     * node app.js
 * Through npm 
     * node node_modules/nodesul
-
+[landing_page]: https://github.com/Sirivasv/nodesul/raw/master/images/src1.png "Landing page"
+[response_received]: https://github.com/Sirivasv/nodesul/raw/master/images/src2.png "Response received"
 
 ## Features
 * http://<SERVER_IP>/Greeting 
@@ -40,6 +41,12 @@ With Linux to start listening on PORT (this case 80) may require sudo privileges
 			"msg" : "Feliz Cumpleanos Saul!!!"
 		};
 	```
+* http://<SERVER_IP>/
+	* Here there will be a render index.html page to handle the POST request (using AJAX) of the previous Greeting feature.
+		* ![alt text][landing_page]
+	* This is the display of the response.
+		* ![alt text][response_received]
+
 * http://<SERVER_IP>/Convert
 	* Sending a JSON POST request with the form:
 	```javascript
@@ -70,4 +77,4 @@ With Linux to start listening on PORT (this case 80) may require sudo privileges
 			"amount" : 1,
 			"convertedAmount" : 0.0524
 		};
-	```
+	```	
