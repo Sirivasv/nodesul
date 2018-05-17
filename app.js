@@ -67,6 +67,6 @@
 
 	});
 
-	var PORT = 99;
+	var PORT = 80;
 	app.listen(PORT);
 	console.log('running on port ' + PORT);
