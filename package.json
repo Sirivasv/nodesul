@@ -1,6 +1,6 @@
 {
 	"name": "nodesul",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "My first npm module m8!",
 	"main": "app.js",
 	"scripts": {
