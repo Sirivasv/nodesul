@@ -4,6 +4,7 @@
 	"description": "My first npm module m8!",
 	"main": "app.js",
 	"scripts": {
+		"debug": "node --inspect=localhost:9223 app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -14,10 +15,6 @@
 	"license": "ISC",
 	"dependencies": {
 		"body-parser": "^1.18.2",
-		"express": "^4.16.2",
-		"google-currency": "^1.0.7"
-	},
-	"devDependencies": {
-		"karma": "^1.7.1"
+		"express": "^4.16.2"
 	}
 }

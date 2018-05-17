@@ -1,5 +1,5 @@
 	var express = require('express');
-	const converter = require('google-currency');
+	var https = require('https');
 
 	var app = express();
 	var bodyParser = require('body-parser');
@@ -35,32 +35,38 @@
 		var amount = request.body.amount;
 
 		var options = {
-			from: from,
-			to: to,
-			amount: amount
+			host: 'free.currencyconverterapi.com',
+			port: 443,
+			path: '/api/v5/convert?q='+ from + '_' + to + '&compact=ultra',
+			method: 'GET'
 		};
 
-		converter(options).then(value => { 
+		var getHttpsRequest = https.request(options, function(httpsRequestResponse){
+			console.log(httpsRequestResponse);
+			httpsRequestResponse.on('data', function(data){
+				var responseCurrency = JSON.parse(data);
+				var value = responseCurrency[from + '_' + to];
+				var responseValues = {
+					"rsp" : 200,
+					"from" : from,
+					"to" : to,
+					"amount" : amount,
+					"convertedAmount" : parseFloat(amount) * parseFloat(value)
+				};
 
-			console.log(value);
-
-			var responseValues = {
-				"rsp" : 200,
-				"from" : from,
-				"to" : to,
-				"amount" : amount,
-				"convertedAmount" : value.converted
-			};
-
-			var responseString = JSON.stringify(responseValues);
-			console.log(responseString);
-			response.send(responseString);
-
+				var responseString = JSON.stringify(responseValues);
+				console.log(responseString);
+				response.send(responseString);
+			});
 		});
-		
+
+		getHttpsRequest.end();
+	    getHttpsRequest.on('error', function(err){
+	        console.log("Error: ", err);
+	    }); 
 
 	});
 
-	var PORT = 80;
+	var PORT = 99;
 	app.listen(PORT);
 	console.log('running on port ' + PORT);

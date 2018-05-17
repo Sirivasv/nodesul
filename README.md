@@ -1,6 +1,6 @@
 # Welcome!
 This is my npm module where I am just testing some features of npm development.
-* Convert Feature is currently depending on google-currency module it asks https://finance.google.com/finance/converter.
+* Convert Feature is currently depending on https://free.currencyconverterapi.com/api/v5/convert.
 
 ## Installing
 * Through github
