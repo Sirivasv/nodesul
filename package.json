@@ -13,6 +13,7 @@
 	},
 	"author": "Saul Ivan Rivas Vega <saul.rivas@gartpage.com>",
 	"license": "ISC",
+	"keywords": ["currency", "converter", "finance", "begineer", "express", "free"],
 	"dependencies": {
 		"body-parser": "^1.18.2",
 		"express": "^4.16.2"
